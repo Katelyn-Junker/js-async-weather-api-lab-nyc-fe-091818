@@ -2,6 +2,9 @@ const API_KEY = "5f740c46b1f20bf3ef74ee861828ee8f"
 
 function handleFormSubmit(event) {
   //handle submit event
+  const input = document.querySelector('#city')
+  const city= input.value
+  fetchCurrentWeather(city)
 }
 
 function fetchCurrentWeather(city) {
@@ -27,4 +30,7 @@ function createChart(json) {
 
 document.addEventListener('DOMContentLoaded', function() {
   //add event listener here for form submission
+  document.addEventListener('submit', function(event){
+    handleFormSubmit(event)
+  })
 })
