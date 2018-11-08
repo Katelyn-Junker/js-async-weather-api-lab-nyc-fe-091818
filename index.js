@@ -10,7 +10,8 @@ function handleFormSubmit(event) {
 function fetchCurrentWeather(city) {
   //fetch current weather based on city
   fetch('http://api.openweathermap.org/data/2.5/weather?' + city + '&APPID=' + API_KEY)
-  
+  .then((response)=> response.json())
+  .then((responseJson)=> console.log(responseJson))
 }
 
 function displayCurrentWeather(json) {
@@ -33,6 +34,7 @@ function createChart(json) {
 document.addEventListener('DOMContentLoaded', function() {
   //add event listener here for form submission
   document.addEventListener('submit', function(event){
+    event.preventDefault()
     handleFormSubmit(event)
   })
 })
