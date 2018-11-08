@@ -1,4 +1,4 @@
-const API_KEY = "YOUR API KEY"
+const API_KEY = 
 
 function handleFormSubmit(event) {
   //handle submit event
