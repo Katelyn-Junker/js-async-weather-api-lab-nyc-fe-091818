@@ -41,12 +41,14 @@ function fetchFiveDayForecast(city) {
 function displayFiveDayForecast(json) {
   //render five day forecast data to the DOM using provided IDs and json from API
   console.log(json)
-  const firstForecast =json.list[0]
+  for(let i =0; i < 39; i++){
+  const firstForecast =json.list[i]
   const div= document.createElement('div')
   div.innerHTML= '<p>'+ firstForecast.dt_txt + '</p><p>'+ firstForecast.main.temp_max+'</p><p>'+firstForecast.main.temp_max+'</p>'
   
   const aside = document.querySelector('aside')
   aside.appendChild(div)
+  }
   
   console.log(firstForecast)
   
