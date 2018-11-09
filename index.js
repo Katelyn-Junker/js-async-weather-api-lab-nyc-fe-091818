@@ -5,6 +5,7 @@ function handleFormSubmit(event) {
   const input = document.querySelector('#city')
   const city= input.value
   fetchCurrentWeather(city)
+  fetchFiveDayForcast(city)
 }
 
 function fetchCurrentWeather(city) {
@@ -33,6 +34,7 @@ function displayCurrentWeather(json) {
 
 function fetchFiveDayForecast(city) {
   //fetch five day forecast data based on city
+  fetch()
 }
 
 function displayFiveDayForecast(json) {
