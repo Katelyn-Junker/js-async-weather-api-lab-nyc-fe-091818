@@ -35,7 +35,10 @@ function fetchFiveDayForecast(city) {
   //fetch five day forecast data based on city
   fetch('api.openweathermap.org/data/2.5/forecast?q=' + city + '&APPID=' + API_KEY + '&units=imperial')
   .then((response)=> response.json())
-  .then((responseJson)=> displayFiveDayForecast(responseJson))
+.then((responseJson)=> {
+  displayFiveDayForecast(responseJson)
+  creatChart(responseJson)
+})
 }
 
 function displayFiveDayForecast(json) {
@@ -57,6 +60,7 @@ function displayFiveDayForecast(json) {
 function createChart(json) {
   //Bonus: render temperature chart using five day forecast data and ChartJS
   const ctx = document.getElementById("WeatherChart").getContext('2d');
+  
 }
 
 document.addEventListener('DOMContentLoaded', function() {
