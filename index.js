@@ -57,10 +57,18 @@ function displayFiveDayForecast(json) {
   
 }
 
+function getDateText(forecast){
+  return forecast.dt_txt
+}
+
 function createChart(json) {
   //Bonus: render temperature chart using five day forecast data and ChartJS
   const ctx = document.getElementById("WeatherChart").getContext('2d');
-  console.log(json)
+  
+  
+  const forecasts = json.list 
+  
+  
   const myChart = new Chart(ctx, {
     type: 'line',
     data: {
