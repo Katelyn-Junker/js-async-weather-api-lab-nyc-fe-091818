@@ -17,7 +17,6 @@ function fetchCurrentWeather(city) {
 
 function displayCurrentWeather(json) {
   //render current weather data to the DOM using provided IDs and json from API
-  console.log(json)
   const temperatureCell = document.querySelector('#temp')
   temperatureCell.innerText = json.main.temp + '°F'
   const low = document.querySelector('#low')
@@ -33,6 +32,7 @@ function displayCurrentWeather(json) {
 
 
 function fetchFiveDayForecast(city) {
+  console.log(json)
   //fetch five day forecast data based on city
   fetch('api.openweathermap.org/data/2.5/forecast?q=' + city + '&APPID=' + API_KEY + '&units=imperial')
   .then((response)=> response.json())
