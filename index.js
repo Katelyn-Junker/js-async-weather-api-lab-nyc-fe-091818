@@ -43,7 +43,7 @@ function displayFiveDayForecast(json) {
   console.log(json)
   const firstForecast =json.list[0]
   const div= document.createElement('div')
-  div.innerHTML= '<p>'+ 'hi'+ '</p><p>'+ 'hello'+'</p><p>'+'meh'+'</p>'
+  div.innerHTML= '<p>'+ firstForecast.dt_txt + '</p><p>'+ firstForecast.main.temp_max+'</p><p>'+firstForecast.main.temp_max+'</p>'
   
   const aside = document.querySelector('aside')
   aside.appendChild(div)
