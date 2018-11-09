@@ -11,11 +11,14 @@ function fetchCurrentWeather(city) {
   //fetch current weather based on city
   fetch('http://api.openweathermap.org/data/2.5/weather?' + city + '&APPID=' + API_KEY)
   .then((response)=> response.json())
-  .then((responseJson)=> console.log(responseJson))
+  .then((responseJson)=> displayCurrentWeather(responseJson))
 }
 
 function displayCurrentWeather(json) {
   //render current weather data to the DOM using provided IDs and json from API
+  console.log(json)
+  const temperatureCell = document.querySelector('#temp')
+  
 }
 
 
