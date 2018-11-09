@@ -19,6 +19,10 @@ function displayCurrentWeather(json) {
   console.log(json)
   const temperatureCell = document.querySelector('#temp')
   temperatureCell.innerText = json.main.temp 
+  const low = document.querySelector('#low')
+  const high = document.querySelector('#high')
+  low.innerText = json.main.temp_min
+  high.innerText= json.main.temp_max
 }
 
 
