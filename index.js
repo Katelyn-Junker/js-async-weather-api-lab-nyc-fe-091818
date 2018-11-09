@@ -68,6 +68,9 @@ function createChart(json) {
   
   const forecasts = json.list 
   
+  const chartLabels = forecasts.map(getDateText)
+  console.log(json.list)
+  console.log()
   
   const myChart = new Chart(ctx, {
     type: 'line',
