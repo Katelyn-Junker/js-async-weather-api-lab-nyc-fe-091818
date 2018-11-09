@@ -70,7 +70,7 @@ function createChart(json) {
   
   const chartLabels = forecasts.map(getDateText)
   console.log(json.list)
-  console.log()
+  console.log(chartLabels)
   
   const myChart = new Chart(ctx, {
     type: 'line',
